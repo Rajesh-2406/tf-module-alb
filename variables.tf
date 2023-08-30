@@ -1,6 +1,5 @@
 variable "env" {}
 variable "tags" {}
-variable "component" {}
 variable "subnets" {}
 variable "name" {}
 variable "vpc_id" {}
