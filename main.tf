@@ -1,6 +1,6 @@
 resource "aws_security_group" "main" {
-  name        = "${var.component}-${var.env}-sg"
-  description = "${var.component}-${var.env}-sg"
+  name        = "${var.name}-${var.env}-sg"
+  description = "${var.name}-${var.env}-sg"
   vpc_id = var.vpc_id
 
   ingress {
@@ -17,7 +17,7 @@ resource "aws_security_group" "main" {
 
   }
   tags = {
-    name = "${var.component}-${var.env}-sg"
+    name = "${var.name}-${var.env}-sg"
   }
 }
 
