@@ -1,0 +1,10 @@
+variable "env" {}
+variable "tags" {}
+variable "component" {}
+variable "subnets" {}
+variable "name" {}
+variable "vpc_id" {}
+variable "port" {}
+variable "sg_subnet_cidr" {}
+variable "load_balancer_type" {}
+variable "internal" {}
