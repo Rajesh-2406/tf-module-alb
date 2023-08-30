@@ -21,6 +21,8 @@ resource "aws_security_group" "main" {
   }
 }
 
+
+
 resource "aws_lb" "main" {
   name               = "${var.name}-${var.env}-lb"
   internal           = var.internal
