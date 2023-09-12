@@ -72,23 +72,6 @@ resource "aws_lb_listener" "pravite" {
     }
   }
 }
-resource "aws_lb_listener" "main" {
-  load_balancer_arn = aws_lb.main.arn
-  port              = 443
-  protocol          = "HTTPS"
-  ssl_policy        = "ELBSecurityPolicy-2016-08"
-  certificate_arn   = "arn:aws:acm:us-east-1:600222537277:certificate/48250658-8c3b-4e4e-9987-49c283dd3857"
-
-  default_action {
-    type = "fixed-response"
-
-    fixed_response {
-      content_type = "text/plain"
-      message_body = "Default Error"
-      status_code  = "500"
-    }
-  }
-}
 
 resource "aws_lb_listener" "main" {
   load_balancer_arn = aws_lb.main.arn
