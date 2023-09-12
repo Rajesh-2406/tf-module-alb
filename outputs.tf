@@ -4,5 +4,5 @@ output "dns_name" {
 }
 
  output "listener_arn" {
-   value = aws_lb_listener.main.arn
+   value = var.name == "public" ? aws_lb_listener.main.arn : aws_lb_listener.pravite[0].arn
  }
