@@ -79,7 +79,7 @@ resource "aws_lb_listener" "main" {
   port              = 443
   protocol          = "HTTPS"
   ssl_policy = "ELBSecurityPolicy-2016-08"
-  certificate_arn = "arn:aws:acm:us-east-1:600222537277:certificate/48250658-8c3b-4e4e-9987-49c283dd3857"
+  certificate_arn = "arn:aws:kms:us-east-1:765371225572:key/4f740efe-1e68-4e25-b2d1-d2fd4af5fa91"
 
   default_action {
     type = "fixed-response"
