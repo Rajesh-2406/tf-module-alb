@@ -8,4 +8,6 @@ variable "port" {
 }
 variable "sg_subnet_cidr" {}
 variable "load_balancer_type" {}
-variable "internal" {}
+variable "internal" {
+  default = 1
+}
