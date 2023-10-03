@@ -40,7 +40,7 @@ resource "aws_lb" "main" {
 
 
 resource "aws_lb_listener" "public" {
-  count              =  var.name == "public" ? 1 : 0
+  count             =  var.name == "public" ? 1 : 0
   load_balancer_arn = aws_lb.main.arn
   port              = 80
   protocol          = "HTTP"
@@ -74,12 +74,12 @@ resource "aws_lb_listener" "private" {
 }
 
 resource "aws_lb_listener" "main" {
-  count              =  var.name == "public" ? 1 : 0
+  count             =  var.name == "public" ? 1 : 0
   load_balancer_arn = aws_lb.main.arn
   port              = 443
   protocol          = "HTTPS"
-  ssl_policy = "ELBSecurityPolicy-2016-08"
-  certificate_arn = "arn:aws:acm:us-east-1:765371225572:certificate/1686caf6-2036-4f83-81d4-cfcf0c941536"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = "arn:aws:acm:us-east-1:765371225572:certificate/1686caf6-2036-4f83-81d4-cfcf0c941536"
 
   default_action {
     type = "fixed-response"
